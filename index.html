@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UFO/UAP 视觉档案 · 美国国防部解密全记录 · 越界</title>
+<title>UFO/UAP 美国国防部官方档案全收录 · PURSUE Release 01 · 越界视觉档案</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #0b0b0b;
-    color: #bfbab0;
+    background: #0b0b0b; color: #bfbab0;
     font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
     line-height: 1.75; -webkit-font-smoothing: antialiased;
   }
@@ -19,113 +18,99 @@
     animation: fogDrift 40s ease-in-out infinite;
   }
   @keyframes fogDrift { 0%,100%{transform:translate(0,0)} 50%{transform:translate(1%,-1%)} }
-  .main { position:relative; z-index:2; max-width:960px; margin:0 auto; padding:6vh 4vw 12vh; }
+  .main { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:5vh 4vw 12vh; }
 
-  .header { text-align:center; padding-bottom:5vh; margin-bottom:5vh; border-bottom:0.5px solid rgba(180,170,150,0.12); }
-  .header .badge { font-size:11px; letter-spacing:0.2em; color:#8a857c; border:0.5px solid rgba(180,170,150,0.2); padding:4px 14px; border-radius:2px; margin-bottom:2vh; display:inline-block; font-family:sans-serif; }
-  .header h1 { font-size:clamp(26px,3.5vw,40px); font-weight:400; color:#d6d0c4; letter-spacing:0.05em; line-height:1.3; }
-  .header .dateline { font-size:13px; color:#6b6560; margin-top:1.5vh; letter-spacing:0.08em; }
+  .header { text-align:center; padding-bottom:4vh; margin-bottom:4vh; border-bottom:0.5px solid rgba(180,170,150,0.12); }
+  .header .badge { font-size:11px; letter-spacing:0.2em; color:#8a857c; border:0.5px solid rgba(180,170,150,0.2); padding:4px 14px; border-radius:2px; display:inline-block; font-family:sans-serif; }
+  .header h1 { font-size:clamp(22px,3vw,36px); font-weight:400; color:#d6d0c4; letter-spacing:0.05em; line-height:1.4; margin-top:2vh; }
+  .header .dateline { font-size:12px; color:#6b6560; margin-top:1vh; letter-spacing:0.06em; }
 
-  .alert { margin:0 0 5vh; padding:2.5vh 3vw; border:0.5px solid rgba(196,185,152,0.25); border-radius:2px; background:rgba(196,185,152,0.04); text-align:center; }
-  .alert .a1 { font-size:15px; color:#c4b998; letter-spacing:0.04em; }
-  .alert .a2 { font-size:11px; color:#6b6560; margin-top:0.8vh; letter-spacing:0.1em; }
+  .alert { margin:0 0 4vh; padding:2.5vh 3vw; border:0.5px solid rgba(196,185,152,0.25); border-radius:2px; background:rgba(196,185,152,0.04); text-align:center; }
+  .alert .a1 { font-size:14px; color:#c4b998; letter-spacing:0.04em; }
+  .alert .a2 { font-size:10px; color:#6b6560; margin-top:0.6vh; letter-spacing:0.08em; }
 
   .section { margin-bottom:7vh; }
-  .section h2 { font-size:18px; font-weight:400; color:#c4b998; letter-spacing:0.08em; margin-bottom:3vh; padding-left:12px; border-left:2px solid rgba(196,185,152,0.3); }
-  .section h3 { font-size:15px; font-weight:400; color:#a8a39a; letter-spacing:0.05em; margin:3vh 0 1.5vh; }
+  .section h2 { font-size:17px; font-weight:400; color:#c4b998; letter-spacing:0.08em; margin-bottom:3vh; padding-left:12px; border-left:2px solid rgba(196,185,152,0.3); }
+  .section h3 { font-size:14px; font-weight:400; color:#a8a39a; letter-spacing:0.05em; margin:3vh 0 1.5vh; }
+  .section p { font-size:14px; color:#a09b92; margin-bottom:1.5vh; }
 
-  .section p { font-size:15px; color:#a09b92; margin-bottom:1.5vh; letter-spacing:0.03em; }
-  .section p strong { color:#c8c3b8; font-weight:500; }
-
-  /* VIDEO GALLERY */
-  .video-grid { display:grid; grid-template-columns: 1fr 1fr; gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; }
+  /* VIDEO */
+  .video-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; }
   .video-card { background:#0d0d0d; padding:2vh 2vw; }
-  .video-card .v-title { font-size:14px; color:#d4cfc6; letter-spacing:0.04em; margin-bottom:0.3vh; }
-  .video-card .v-meta { font-size:10px; color:#6b6560; letter-spacing:0.06em; margin-bottom:1.5vh; }
-  .video-card .v-wrap { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000; }
-  .video-card .v-wrap iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
-  .video-card .v-wrap video { position:absolute; top:0; left:0; width:100%; height:100%; }
+  .video-card .v-title { font-size:14px; color:#d4cfc6; letter-spacing:0.04em; }
+  .video-card .v-meta { font-size:10px; color:#6b6560; letter-spacing:0.06em; margin:0.3vh 0 1.2vh; }
+  .video-card video { width:100%; background:#000; border-radius:2px; }
   .video-card.wide { grid-column:1/-1; }
 
-  /* IMAGE GALLERY */
-  .img-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; }
-  .img-card { background:#0d0d0d; position:relative; }
-  .img-card .img-wrap { width:100%; padding-bottom:75%; position:relative; overflow:hidden; background:#111; }
-  .img-card .img-wrap img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; }
-  .img-card .img-info { padding:1.5vh 1.5vw; }
-  .img-card .img-title { font-size:13px; color:#d4cfc6; letter-spacing:0.03em; }
-  .img-card .img-meta { font-size:10px; color:#6b6560; letter-spacing:0.06em; margin-top:0.3vh; }
-  .img-card .img-badge { display:inline-block; margin-top:0.5vh; font-size:9px; padding:1px 6px; border-radius:2px; letter-spacing:0.06em; }
-  .badge-official { color:#8a9b7a; border:0.5px solid rgba(138,155,122,0.3); }
-  .badge-historic { color:#8a857c; border:0.5px solid rgba(138,133,124,0.3); }
-  .badge-controversial { color:#b0725a; border:0.5px solid rgba(176,114,90,0.3); }
+  /* THUMBNAIL GRID */
+  .thumb-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; }
+  .thumb-item { background:#0d0d0d; position:relative; overflow:hidden; }
+  .thumb-item img { width:100%; display:block; aspect-ratio:3/4; object-fit:cover; }
+  .thumb-item .t-label { padding:1vh 1vw; font-size:9px; color:#6b6560; letter-spacing:0.04em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .thumb-item a { text-decoration:none; color:inherit; }
 
-  /* FULL WIDTH IMAGE */
+  /* FULL IMAGE */
   .full-img { margin:3vh 0; }
   .full-img img { width:100%; border-radius:2px; }
-  .full-img .fi-cap { font-size:11px; color:#6b6560; margin-top:0.8vh; letter-spacing:0.06em; text-align:center; }
+  .full-img .cap { font-size:11px; color:#6b6560; margin-top:0.8vh; text-align:center; }
 
-  /* TIMELINE */
-  .timeline { position:relative; padding-left:20px; border-left:0.5px solid rgba(180,170,150,0.15); margin-left:6px; }
-  .tl-item { margin-bottom:2.5vh; position:relative; }
-  .tl-item::before { content:''; position:absolute; left:-25px; top:7px; width:8px; height:8px; border-radius:50%; background:rgba(196,185,152,0.25); }
-  .tl-item.breaking::before { background:#c4b998; box-shadow:0 0 8px rgba(196,185,152,0.4); }
-  .tl-date { font-size:12px; color:#6b6560; letter-spacing:0.06em; font-family:sans-serif; }
-  .tl-text { font-size:14px; color:#a09b92; margin-top:2px; }
+  /* TABLE */
+  .data-table { width:100%; border-collapse:collapse; font-size:12px; margin:2vh 0; }
+  .data-table th { text-align:left; padding:8px 10px; color:#8a857c; font-weight:400; border-bottom:0.5px solid rgba(180,170,150,0.15); font-size:10px; letter-spacing:0.06em; }
+  .data-table td { padding:8px 10px; border-bottom:0.5px solid rgba(180,170,150,0.07); color:#a09b92; }
+  .data-table a { color:#c4b998; text-decoration:none; }
+  .data-table a:hover { text-decoration:underline; }
 
-  /* PROS/CONS */
+  /* HISTORICAL IMAGES */
+  .img-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; }
+  .img-card { background:#0d0d0d; }
+  .img-card img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+  .img-card .i-info { padding:1.2vh 1vw; }
+  .img-card .i-title { font-size:11px; color:#d4cfc6; }
+  .img-card .i-meta { font-size:9px; color:#6b6560; margin-top:0.2vh; }
+
   .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; margin:2vh 0; }
   .pros-cons > div { background:#0d0d0d; padding:2.5vh 2vw; }
-  .pros-cons h4 { font-size:13px; font-weight:400; letter-spacing:0.08em; margin-bottom:2vh; }
-  .pros-cons h4.pro { color:#8a9b7a; } .pros-cons h4.con { color:#9b7a6a; }
-  .pros-cons ul { list-style:none; font-size:13px; color:#908b83; }
-  .pros-cons li { padding:6px 0; border-bottom:0.5px solid rgba(180,170,150,0.05); }
-  .pros-cons li:last-child { border-bottom:none; }
+  .pros-cons h4 { font-size:12px; font-weight:400; letter-spacing:0.08em; margin-bottom:1.5vh; }
+  .pros-cons h4.p { color:#8a9b7a; } .pros-cons h4.c { color:#9b7a6a; }
+  .pros-cons li { font-size:12px; color:#908b83; padding:5px 0; }
 
-  .pullquote { margin:4vh 0; padding:3vh 3vw; border-left:2px solid rgba(196,185,152,0.25); background:rgba(180,170,150,0.02); }
-  .pullquote .qt { font-size:17px; color:#c8c3b8; letter-spacing:0.04em; font-style:italic; }
-  .pullquote .qs { font-size:12px; color:#6b6560; margin-top:1vh; letter-spacing:0.06em; }
+  .timeline { border-left:0.5px solid rgba(180,170,150,0.15); padding-left:18px; margin-left:6px; }
+  .tl-item { margin-bottom:1.8vh; position:relative; }
+  .tl-item::before { content:''; position:absolute; left:-22px; top:6px; width:6px; height:6px; border-radius:50%; background:rgba(196,185,152,0.25); }
+  .tl-item.b::before { background:#c4b998; box-shadow:0 0 6px rgba(196,185,152,0.4); }
+  .tl-date { font-size:11px; color:#6b6560; letter-spacing:0.06em; font-family:sans-serif; }
+  .tl-text { font-size:13px; color:#a09b92; }
 
-  .data-table { width:100%; border-collapse:collapse; font-size:13px; margin:2vh 0; }
-  .data-table th { text-align:left; padding:10px 14px; color:#8a857c; font-weight:400; letter-spacing:0.06em; border-bottom:0.5px solid rgba(180,170,150,0.15); font-size:11px; }
-  .data-table td { padding:10px 14px; border-bottom:0.5px solid rgba(180,170,150,0.07); color:#a09b92; }
-  .data-table td:first-child { color:#8a857c; }
-  .data-table .num { font-family:monospace; color:#c4b998; }
-
-  .meme-box { margin:3vh 0; padding:3vh 3vw; border:0.5px solid rgba(180,170,150,0.12); border-radius:2px; background:rgba(180,170,150,0.015); }
-  .meme-box h4 { font-size:15px; font-weight:400; color:#b0a898; letter-spacing:0.05em; margin-bottom:2vh; }
-  .meme-box p { font-size:14px; color:#9a958c; margin-bottom:1.5vh; }
-  .meme-list { list-style:none; font-size:14px; color:#9a958c; margin:1.5vh 0; padding:0; }
-  .meme-list li { padding:8px 0 8px 18px; border-bottom:0.5px solid rgba(180,170,150,0.05); position:relative; line-height:1.6; }
-  .meme-list li::before { content:'—'; position:absolute; left:0; color:#5e5a54; }
-  .meme-list li:last-child { border-bottom:none; }
-
-  .player-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; margin:2vh 0; }
-  .player-card { background:#0d0d0d; padding:2.5vh 2vw; }
-  .player-card .name { font-size:16px; color:#d4cfc6; letter-spacing:0.05em; }
-  .player-card .role { font-size:11px; color:#6b6560; letter-spacing:0.08em; margin:0.5vh 0 1.5vh; }
-  .player-card .desc { font-size:13px; color:#908b83; line-height:1.6; }
+  .pullquote { margin:3vh 0; padding:2.5vh 3vw; border-left:2px solid rgba(196,185,152,0.25); background:rgba(180,170,150,0.02); }
+  .pullquote .qt { font-size:15px; color:#c8c3b8; letter-spacing:0.04em; font-style:italic; }
+  .pullquote .qs { font-size:11px; color:#6b6560; margin-top:0.8vh; }
 
   .sources { margin-top:8vh; padding-top:4vh; border-top:0.5px solid rgba(180,170,150,0.12); }
-  .sources h2 { font-size:16px; color:#7a7570; letter-spacing:0.1em; margin-bottom:2.5vh; font-weight:400; }
+  .sources h2 { font-size:15px; color:#7a7570; letter-spacing:0.1em; margin-bottom:2vh; font-weight:400; }
   .sources ol { list-style:none; counter-reset:src; }
-  .sources li { counter-increment:src; font-size:12px; color:#6b6560; padding:8px 0; border-bottom:0.5px solid rgba(180,170,150,0.04); line-height:1.6; }
-  .sources li::before { content:'[' counter(src) ']'; color:#5e5a54; margin-right:10px; font-size:11px; }
+  .sources li { counter-increment:src; font-size:11px; color:#6b6560; padding:6px 0; border-bottom:0.5px solid rgba(180,170,150,0.04); }
+  .sources li::before { content:'[' counter(src) ']'; color:#5e5a54; margin-right:8px; }
   .sources a { color:#8a857c; text-decoration:none; border-bottom:0.5px solid rgba(180,170,150,0.2); }
-  .sources a:hover { color:#c4b998; }
 
-  .footer-note { margin-top:6vh; text-align:center; font-size:11px; color:#4a4640; letter-spacing:0.1em; }
+  .footer-note { margin-top:6vh; text-align:center; font-size:10px; color:#4a4640; letter-spacing:0.1em; }
 
-  .download-box { margin:3vh 0; padding:2.5vh 3vw; border:0.5px solid rgba(196,185,152,0.2); border-radius:2px; background:rgba(196,185,152,0.02); }
-  .download-box a { color:#c4b998; font-size:14px; text-decoration:none; }
-  .download-box a:hover { text-decoration:underline; }
+  .stat-strip { display:grid; grid-template-columns:repeat(4, 1fr); gap:2px; background:rgba(180,170,150,0.08); padding:2px; border-radius:3px; margin-bottom:5vh; }
+  .stat-item { background:#0d0d0d; text-align:center; padding:2vh 1vw; }
+  .stat-val { font-size:clamp(18px,2vw,28px); color:#c4b998; }
+  .stat-lab { font-size:10px; color:#5e5a54; margin-top:0.5vh; letter-spacing:0.08em; }
+
+  .official-statement { margin:2vh 0; padding:2vh 2vw; border:0.5px solid rgba(138,155,122,0.15); border-radius:2px; background:rgba(138,155,122,0.03); }
+  .official-statement .os-name { font-size:12px; color:#8a9b7a; letter-spacing:0.06em; margin-bottom:0.8vh; }
+  .official-statement .os-text { font-size:13px; color:#9a958c; font-style:italic; }
 
   @media (max-width:700px) {
     .main { padding:5vh 4vw 10vh; }
     .video-grid { grid-template-columns:1fr; }
     .img-grid { grid-template-columns:repeat(2, 1fr); }
+    .thumb-grid { grid-template-columns:repeat(auto-fill, minmax(100px, 1fr)); }
     .pros-cons { grid-template-columns:1fr; }
-    .player-cards { grid-template-columns:1fr; }
+    .stat-strip { grid-template-columns:repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -133,443 +118,376 @@
 <div class="bg-fog"></div>
 <div class="main">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="badge">越界 · 视觉档案 · VISUAL ARCHIVE</div>
-    <h1>UFO/UAP 视觉档案全记录<br>美国国防部解密 & 全球著名影像</h1>
-    <div class="dateline">2026年5月10日 · 持续更新 · 所有可确证的UFO影像一页全览</div>
-  </div>
+<div class="header">
+  <div class="badge">U.S. DEPARTMENT OF WAR · PURSUE · 越界视觉档案</div>
+  <h1>美国国防部 UFO/UAP 官方档案全收录<br>总统解密系统首批161份文件 + 历史影像</h1>
+  <div class="dateline">2026年5月10日 · Release 01 · war.gov/UFO · 基于官方源文件构建</div>
+</div>
 
-  <!-- BREAKING -->
-  <div class="alert">
-    <div class="a1">2026年5月8日，PURSUE系统在 war.gov/UFO 上线，首批161份FBI档案公开。这是美国历史上最大规模的官方UFO文件解密行动。</div>
-    <div class="a2">RELEASE 01 · 滚动发布中 · 每几周一批 · war.gov/UFO</div>
-  </div>
+<div class="alert">
+  <div class="a1">此页面所有视频来自美国政府官方源（Wikimedia Commons托管），所有缩略图直接引用 war.gov 官方medialink。不含任何第三方平台嵌入。</div>
+  <div class="a2">PRESIDENTIAL UNSEALING AND REPORTING SYSTEM FOR UAP ENCOUNTERS · 2026.05.08上线</div>
+</div>
 
-  <!-- ============ SECTION 1: OFFICIAL DOD VIDEOS ============ -->
-  <div class="section">
-    <h2>一、美国国防部官方确认的UAP视频 （共5段）</h2>
-    <p>以下视频全部经过五角大楼发言人<strong>官方确认真实性</strong>。三段于2020年4月27日正式解密，两段于2021年由UAPTF确认。</p>
+<div class="stat-strip">
+  <div class="stat-item"><div class="stat-val">161</div><div class="stat-lab">首批公开文件</div></div>
+  <div class="stat-item"><div class="stat-val">127</div><div class="stat-lab">缩略图可预览</div></div>
+  <div class="stat-item"><div class="stat-val">113</div><div class="stat-lab">PDF全文可下载</div></div>
+  <div class="stat-item"><div class="stat-val">5</div><div class="stat-lab">官方UAP视频</div></div>
+</div>
 
-    <div class="video-grid">
+<!-- ===== SECTION 1: OFFICIAL DOD VIDEOS ===== -->
+<div class="section">
+  <h2>一、美国国防部官方UAP视频 （HTML5 · 原始文件 · 可直接播放）</h2>
+  <p>以下视频来自 <strong>Wikimedia Commons</strong>，文件源头为美国海军/国防部官方发布。使用HTML5 <code>&lt;video&gt;</code> 标签嵌入，不依赖YouTube等第三方平台。</p>
 
-      <!-- FLIR -->
-      <div class="video-card">
-        <div class="v-title">FLIR · "Tic Tac" UFO</div>
-        <div class="v-meta">2004.11.14 · USS Nimitz · 加州外海 · 红外瞄准吊舱 · 1分17秒</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/0bmZ-ENjGYM" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <!-- GIMBAL -->
-      <div class="video-card">
-        <div class="v-title">GIMBAL</div>
-        <div class="v-meta">2015.01.20 · USS Theodore Roosevelt · 东海岸 · 红外视频 · 35秒</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/-RS-3d-vvcw" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <!-- GOFAST -->
-      <div class="video-card">
-        <div class="v-title">GOFAST</div>
-        <div class="v-meta">2015.02-03 · USS Theodore Roosevelt · 东海岸 · 红外视频 · 35秒</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/EBufwSOc8rM" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <!-- USS Omaha -->
-      <div class="video-card">
-        <div class="v-title">USS Omaha · 球形UAP入水</div>
-        <div class="v-meta">2019.07.15 · USS Omaha (LCS-12) · 加州外海 · 红外夜视</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/_k5qKmqABtk" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="v-title">FLIR · USS Nimitz "Tic Tac" UFO</div>
+      <div class="v-meta">2004.11.14 · 加州外海 · 红外瞄准吊舱 · 1分17秒</div>
+      <video controls preload="metadata" poster="images/flir-nimitz.jpg">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7b/FLIR_video_of_USS_Nimitz_UFO_event%2C_November_2004.webm/FLIR_video_of_USS_Nimitz_UFO_event%2C_November_2004.webm.720p.vp9.webm" type="video/webm">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7b/FLIR_video_of_USS_Nimitz_UFO_event%2C_November_2004.webm/FLIR_video_of_USS_Nimitz_UFO_event%2C_November_2004.webm.720p.vp8.webm" type="video/webm">
+      </video>
     </div>
-
-    <!-- Middle East orb - full width -->
-    <div class="video-grid" style="margin-top:2px;">
-      <div class="video-card wide">
-        <div class="v-title">中东"金属球" (Metallic Orb) · AARO官方展示</div>
-        <div class="v-meta">2022年 · MQ-9 Reaper无人机 · 中东 · 2023年4月AARO局长在参议院展示 · 因缺乏数据无法识别</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/4Bt6_Potk5Q" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
+    <div class="video-card">
+      <div class="v-title">GIMBAL</div>
+      <div class="v-meta">2015.01.20 · USS Theodore Roosevelt · 东海岸 · 35秒</div>
+      <video controls preload="metadata" poster="images/gimbal.jpg">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a5/GIMBAL_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm/GIMBAL_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm.720p.vp9.webm" type="video/webm">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a5/GIMBAL_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm/GIMBAL_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm.720p.vp8.webm" type="video/webm">
+      </video>
     </div>
-
-    <div class="download-box" style="margin-top:3vh;">
-      <p style="font-size:13px;color:#908b83;">官方原始文件下载（U.S. Naval Air Systems Command FOIA）：</p>
-      <a href="https://www.navair.navy.mil/foia/documents" target="_blank">navair.navy.mil/foia/documents → FLIR.mp4 / GIMBAL.wmv / GOFAST.wmv</a>
+    <div class="video-card">
+      <div class="v-title">GOFAST</div>
+      <div class="v-meta">2015年初 · USS Theodore Roosevelt · 东海岸 · 35秒</div>
+      <video controls preload="metadata" poster="images/gofast.jpg">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7b/GOFAST_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm/GOFAST_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm.720p.vp9.webm" type="video/webm">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7b/GOFAST_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm/GOFAST_video_of_USS_Theodore_Roosevelt_UFO_event%2C_January_2015.webm.720p.vp8.webm" type="video/webm">
+      </video>
+    </div>
+    <div class="video-card">
+      <div class="v-title">USS Omaha · 球形UAP入水</div>
+      <div class="v-meta">2019.07.15 · USS Omaha (LCS-12) · 加州外海 · 红外夜视</div>
+      <video controls preload="metadata" poster="images/uss-omaha.jpg">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5f/USS_Omaha_UFO_video_2019-07-15.webm/USS_Omaha_UFO_video_2019-07-15.webm.720p.vp9.webm" type="video/webm">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5f/USS_Omaha_UFO_video_2019-07-15.webm/USS_Omaha_UFO_video_2019-07-15.webm.720p.vp8.webm" type="video/webm">
+      </video>
     </div>
   </div>
+</div>
 
-  <!-- ============ SECTION 2: USS RUSSELL + OTHER CONFIRMED ============ -->
-  <div class="section">
-    <h2>二、五角大楼确认的照片：金字塔 / 球体 / 橡果 / 金属飞艇</h2>
-    <p>2021年4月，五角大楼发言人Susan Gough确认以下照片由美国海军人员拍摄，UAPTF已纳入调查。</p>
+<!-- ===== SECTION 2: PURSUE OFFICIAL STATEMENTS ===== -->
+<div class="section">
+  <h2>二、官方声明 （2026年5月8日 · 五角大楼新闻发布）</h2>
 
-    <div class="img-grid">
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="images/uss-russell.jpg" alt="USS Russell pyramid UFO" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">金字塔形UAP</div>
-          <div class="img-meta">USS Russell (DDG-59) · 2019.07 · 加州外海</div>
-          <div class="img-badge badge-official">官方确认真实</div>
-        </div>
-      </div>
+  <div class="official-statement">
+    <div class="os-name">国防部长 Pete Hegseth</div>
+    <div class="os-text">"These files, hidden behind classifications, have long fueled justified speculation — and it's time the American people see it for themselves. This release of declassified documents demonstrates the Trump Administration's earnest commitment to unprecedented transparency."</div>
+  </div>
+  <div class="official-statement">
+    <div class="os-name">国家情报总监 Tulsi Gabbard</div>
+    <div class="os-text">"Under President Trump's leadership, ODNI is actively coordinating the Intelligence Community's declassification efforts with the Department of War to ensure a careful, comprehensive, and unprecedented review of our holdings."</div>
+  </div>
+  <div class="official-statement">
+    <div class="os-name">FBI局长 Kash Patel</div>
+    <div class="os-text">"For the first time in history, the American people have unfettered access to declassified government files on Unidentified Anomalous Phenomenon - a level of transparency that no prior administration has delivered."</div>
+  </div>
+  <div class="official-statement">
+    <div class="os-name">NASA局长 Jared Isaacman</div>
+    <div class="os-text">"We will remain candid about what we know to be true, what we have yet to understand, and all that remains to be discovered. Exploration and the pursuit of knowledge are core to NASA's mission."</div>
+  </div>
+</div>
 
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="images/gofast.jpg" alt="GOFAST UFO still" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">GOFAST 静态帧</div>
-          <div class="img-meta">USS Theodore Roosevelt · 2015 · 东海岸</div>
-          <div class="img-badge badge-official">官方解密</div>
-        </div>
-      </div>
+<!-- ===== SECTION 3: PURSUE FILE GALLERY ===== -->
+<div class="section">
+  <h2>三、PURSUE Release 01 · 全部161份文件缩略图预览</h2>
+  <p>以下缩略图直接来自 <strong>war.gov/medialink</strong> 官方源。点击缩略图跳转至官方PDF全文。</p>
 
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="images/flir-nimitz.jpg" alt="FLIR Nimitz Tic Tac UFO" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">FLIR "Tic Tac" 静态帧</div>
-          <div class="img-meta">USS Nimitz · 2004.11 · 加州外海</div>
-          <div class="img-badge badge-official">官方解密</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="meme-box" style="margin-top:3vh;">
-      <h4>"Acorn / Sphere / Metallic Blimp" 三类物体</h4>
-      <p>2021年4月，除金字塔照片外，五角大楼同时确认了三类UAP的静态照片：<strong>橡果形 (Acorn)、球形 (Sphere) 和金属飞艇形 (Metallic Blimp)</strong>。这些照片的时间和地点未完全公开，但形状分类已被AARO纳入标准UAP形态学分类。</p>
-      <p>五角大楼发言人Gough在确认声明中说：<strong>"I can confirm that the referenced photos and videos were taken by United States Navy personnel. The UAPTF has included these incidents in their ongoing examinations."</strong></p>
-    </div>
+  <div class="thumb-grid" id="thumbGrid">
   </div>
 
-  <!-- ============ SECTION 3: WAR.GOV/UFO SCREENSHOT ============ -->
-  <div class="section">
-    <h2>三、war.gov/UFO · PURSUE系统 实况截图</h2>
-    <p>2026年5月8日上线的总统级别UFO档案解密系统。首批161份文件。以下为实况截图。</p>
+  <p style="margin-top:2vh;font-size:12px;color:#5e5a54;">注：部分缩略图对应的PDF文件可能需要美国联邦政府授权访问。完整文件列表见下节表格。</p>
+</div>
 
-    <div class="full-img">
-      <img src="images/war-gov-ufo.jpg" alt="war.gov/UFO PURSUE system screenshot" loading="lazy">
-      <div class="fi-cap">war.gov/UFO — PRESIDENTIAL UNSEALING AND REPORTING SYSTEM FOR UAP ENCOUNTERS (PURSUE) · 2026.05.08</div>
-    </div>
+<!-- ===== SECTION 4: FILE TABLE ===== -->
+<div class="section">
+  <h2>四、完整文件清单 （Release 01 — 2026年5月8日）</h2>
+  <p>点击PDF链接可直接下载。来源：<strong>war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv</strong></p>
 
-    <p>国防部长Pete Hegseth声明：<strong>"These files, hidden behind classifications, have long fueled justified speculation — and it's time the American people see it for themselves."</strong></p>
-
-    <h3>首批Release 01文件列表（FBI部分档案）</h3>
-    <table class="data-table">
-      <thead>
-        <tr><th>文件名</th><th>机构</th><th>发布日期</th><th>格式</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_2</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_3</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_4</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_5</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_6</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_7</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_9</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SECTION_10</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SERIAL_130</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td>65_HS1-834228961_62-HQ-83894_SERIAL_153</td><td class="num">FBI</td><td>2026.05.08</td><td>PDF</td></tr>
-        <tr><td style="color:#5e5a54;font-style:italic;">...共161份文件（17页）</td><td></td><td></td><td></td></tr>
-      </tbody>
-    </table>
+  <div style="overflow-x:auto;">
+  <table class="data-table" id="fileTable">
+    <thead>
+      <tr><th>文件名</th><th>类型</th><th>机构</th><th>发布日</th><th>下载</th></tr>
+    </thead>
+    <tbody id="fileTableBody">
+    </tbody>
+  </table>
   </div>
+</div>
 
-  <!-- ============ SECTION 4: FAMOUS UFO PHOTOS (NON-OFFICIAL) ============ -->
-  <div class="section">
-    <h2>四、历史上最著名的非官方UFO照片 （全球经典）</h2>
-    <p>以下照片虽非五角大楼官方确认，但构成UFO目击史的核心视觉记录。</p>
+<!-- ===== SECTION 5: WAR.GOV SCREENSHOT ===== -->
+<div class="section">
+  <h2>五、war.gov/UFO · PURSUE系统实况截图</h2>
+  <div class="full-img">
+    <img src="images/war-gov-ufo.jpg" alt="war.gov/UFO PURSUE system" loading="lazy">
+    <div class="cap">war.gov/UFO — 总统UAP遭遇解密与报告系统 · 交互式文件浏览器 · 2026年5月8日</div>
+  </div>
+</div>
 
-    <div class="img-grid">
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/UFO_picture_taken_by_Paul_Trent_in_McMinnville%2C_Oregon.jpg" alt="McMinnville UFO 1950" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">McMinnville UFO</div>
-          <div class="img-meta">1950.05.11 · 俄勒冈州 · Paul Trent拍摄</div>
-          <div class="img-badge badge-historic">历史经典 · 最受研究的UFO照片之一</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Battle_of_Los_Angeles_LATimes.jpg" alt="Battle of Los Angeles 1942" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Battle of Los Angeles</div>
-          <div class="img-meta">1942.02.25 · 洛杉矶 · 探照灯照射不明物体</div>
-          <div class="img-badge badge-historic">历史经典 · 军方发射1400枚炮弹</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/en/c/c5/Patrick_Mar%C3%A9chal_UFO_photo_uncropped.jpg" alt="Belgian UFO 1990" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Belgian UFO Wave</div>
-          <div class="img-meta">1990.04.04 · Petit-Rechain · 三角形UFO</div>
-          <div class="img-badge badge-controversial">2011年拍摄者承认伪造</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/PhoenixLights1997model.jpg" alt="Phoenix Lights 1997" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Phoenix Lights</div>
-          <div class="img-meta">1997.03.13 · 亚利桑那州 · 数千目击者</div>
-          <div class="img-badge badge-historic">大规模目击事件 · 军方后承认为照明弹</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Flying_Saucer_-_NARA_NAID_303938034_cropped.png" alt="Washington DC UFO 1952" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Washington D.C. UFO</div>
-          <div class="img-meta">1952.07.19-20 · 华盛顿特区 · 雷达+目视确认</div>
-          <div class="img-badge badge-historic">美国首都被不明物体飞越 · 战斗机拦截</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/en/7/78/Lubbock_Lights_Hart_photos.png" alt="Lubbock Lights 1951" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Lubbock Lights</div>
-          <div class="img-meta">1951.08-09 · 德克萨斯州 · V形编队光点</div>
-          <div class="img-badge badge-historic">德州理工教授拍摄 · Project Blue Book调查</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/en/c/c7/The_Calvine_UFO_Photograph.jpg" alt="Calvine UFO 1990" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Calvine UFO (苏格兰)</div>
-          <div class="img-meta">1990.08.04 · 苏格兰 · 菱形物体+战斗机</div>
-          <div class="img-badge badge-historic">2022年才公开 · 英国国防部档案</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Marcel-roswell-debris_0.jpg" alt="Roswell 1947 debris" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Roswell Incident</div>
-          <div class="img-meta">1947.07 · 新墨西哥州 · 军方收回"飞碟"声明</div>
-          <div class="img-badge badge-historic">UFO学的原点 · 军方后称气象气球</div>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <div class="img-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Gulf_Breeze_UFO_model.jpg" alt="Gulf Breeze UFO model" loading="lazy">
-        </div>
-        <div class="img-info">
-          <div class="img-title">Gulf Breeze UFO</div>
-          <div class="img-meta">1987-1988 · 佛罗里达州 · Ed Walters拍摄</div>
-          <div class="img-badge badge-controversial">后被发现在阁楼藏有UFO模型</div>
-        </div>
-      </div>
+<!-- ===== SECTION 6: HISTORICAL GALLERY ===== -->
+<div class="section">
+  <h2>六、全球著名UFO历史照片</h2>
+  <div class="img-grid">
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/UFO_picture_taken_by_Paul_Trent_in_McMinnville%2C_Oregon.jpg" alt="McMinnville" loading="lazy">
+      <div class="i-info"><div class="i-title">McMinnville UFO</div><div class="i-meta">1950 · Oregon · Paul Trent</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Battle_of_Los_Angeles_LATimes.jpg" alt="Battle of LA" loading="lazy">
+      <div class="i-info"><div class="i-title">Battle of Los Angeles</div><div class="i-meta">1942 · 军方发射1,400发炮弹</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Flying_Saucer_-_NARA_NAID_303938034_cropped.png" alt="Washington DC UFO" loading="lazy">
+      <div class="i-info"><div class="i-title">Washington D.C. UFO</div><div class="i-meta">1952 · 首都雷达+目视确认</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c7/The_Calvine_UFO_Photograph.jpg" alt="Calvine UFO" loading="lazy">
+      <div class="i-info"><div class="i-title">Calvine UFO (苏格兰)</div><div class="i-meta">1990 · 英国国防部档案</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/PhoenixLights1997model.jpg" alt="Phoenix Lights" loading="lazy">
+      <div class="i-info"><div class="i-title">Phoenix Lights</div><div class="i-meta">1997 · 亚利桑那州 · 数千目击者</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/78/Lubbock_Lights_Hart_photos.png" alt="Lubbock Lights" loading="lazy">
+      <div class="i-info"><div class="i-title">Lubbock Lights</div><div class="i-meta">1951 · Texas · V形编队</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Marcel-roswell-debris_0.jpg" alt="Roswell debris" loading="lazy">
+      <div class="i-info"><div class="i-title">Roswell Incident</div><div class="i-meta">1947 · 新墨西哥州 · 残骸</div></div>
+    </div>
+    <div class="img-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Gulf_Breeze_UFO_model.jpg" alt="Gulf Breeze" loading="lazy">
+      <div class="i-info"><div class="i-title">Gulf Breeze UFO</div><div class="i-meta">1987 · Florida · Ed Walters</div></div>
     </div>
   </div>
+</div>
 
-  <!-- ============ SECTION 5: 2023 MQ-9 AARO IMAGES ============ -->
-  <div class="section">
-    <h2>五、国会UAP听证会全记录 （2024年）</h2>
-    <p>2024年11月13日，众议院监督与问责委员会举行UAP听证会。Luis Elizondo、退役海军少将Tim Gallaudet、记者Michael Shellenberger作证，首次公开披露"Immaculate Constellation"秘密项目。</p>
-
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="v-title">2024众议院UAP听证会 · Elizondo/Shellenberger作证</div>
-        <div class="v-meta">2024.11.13 · House Oversight Committee · "Immaculate Constellation"首次被披露 · 2小时+</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/cSkyJuRerYU" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="video-card">
-        <div class="v-title">2024 UAP听证会完整版 · ABC News</div>
-        <div class="v-meta">2024.11.13 · 众议院监督委员会 · 四名证人作证 · 超过2小时全程记录</div>
-        <div class="v-wrap">
-          <iframe src="https://www.youtube.com/embed/k7NzR0payrs" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
+<!-- ===== SECTION 7: PENTAGON PHOTO GALLERY ===== -->
+<div class="section">
+  <h2>七、五角大楼确认的UAP照片</h2>
+  <p>2021年4月，五角大楼发言人Susan Gough确认以下照片由美国海军人员拍摄，UAPTF已纳入调查。</p>
+  <div class="img-grid">
+    <div class="img-card">
+      <img src="images/uss-russell.jpg" alt="USS Russell pyramid" loading="lazy">
+      <div class="i-info"><div class="i-title">金字塔形UAP</div><div class="i-meta">USS Russell · 2019 · 官方确认</div></div>
     </div>
-
-    <div class="meme-box" style="margin-top:3vh;">
-      <h4>听证会关键披露</h4>
-      <p>记者<strong>Michael Shellenberger</strong>作证称五角大楼消息源告诉他存在一个名为<strong>"Immaculate Constellation"</strong>的未公开特殊访问计划（SAP），收集了大量高分辨率UAP影像。他提交了一份12页报告给国会。他的原话："It's not those fuzzy photos and videos that we've been given, it's very high resolution."</p>
-      <p><strong>Luis Elizondo</strong>声称："UAP are real. Advanced technologies not made by our government — or any other government — are monitoring sensitive military installations around the globe." 他称美国正处于"多十年秘密军备竞赛"中。</p>
-      <p>退役海军少将<strong>Tim Gallaudet</strong>作证他在一次航母打击群演习中收到关于UAP导致多起近空中相撞的紧急邮件——但第二天邮件从他的收件箱中被删除。</p>
-      <p>第二天（2024.11.14），AARO局长Kosloski在另一场记者会上表示：<strong>累计1,652案件，&lt;2.5%显示异常特征，未发现外星证据。</strong>两套叙事在同一周内形成鲜明对比。</p>
+    <div class="img-card">
+      <img src="images/flir-nimitz.jpg" alt="FLIR Tic Tac still" loading="lazy">
+      <div class="i-info"><div class="i-title">FLIR "Tic Tac" 静态帧</div><div class="i-meta">USS Nimitz · 2004 · 官方解密</div></div>
+    </div>
+    <div class="img-card">
+      <img src="images/gofast.jpg" alt="GOFAST still" loading="lazy">
+      <div class="i-info"><div class="i-title">GOFAST 静态帧</div><div class="i-meta">USS Roosevelt · 2015 · 官方解密</div></div>
+    </div>
+    <div class="img-card">
+      <img src="images/metallic-orb.jpg" alt="Middle East Orb" loading="lazy">
+      <div class="i-info"><div class="i-title">中东"金属球"</div><div class="i-meta">MQ-9 · 2022 · AARO展示</div></div>
     </div>
   </div>
+</div>
 
-  <!-- ============ SECTION 6: FULL TIMELINE ============ -->
-  <div class="section">
-    <h2>六、完整事件时间线 （1942 - 2026）</h2>
-    <div class="timeline">
-      <div class="tl-item"><div class="tl-date">1942.02.25</div><div class="tl-text">Battle of Los Angeles —— 军方发射1,400枚防空炮弹攻击不明飞行物体</div></div>
-      <div class="tl-item"><div class="tl-date">1947.07.08</div><div class="tl-text">Roswell Incident —— 军方先声称回收"飞碟"，次日改口为气象气球</div></div>
-      <div class="tl-item"><div class="tl-date">1950.05.11</div><div class="tl-text">McMinnville照片 —— Paul Trent拍摄的两张飞碟照片成为UFO学经典</div></div>
-      <div class="tl-item"><div class="tl-date">1951.08-09</div><div class="tl-text">Lubbock Lights —— 德州V形光点编队，教授拍摄，Project Blue Book调查</div></div>
-      <div class="tl-item"><div class="tl-date">1952.07.19-20</div><div class="tl-text">华盛顿DC UFO —— 不明物体飞越首都，雷达+目视双重确认，战斗机拦截失败</div></div>
-      <div class="tl-item"><div class="tl-date">1966.04.06</div><div class="tl-text">Westall UFO —— 澳大利亚墨尔本学校200+学生和教师目击银色碟形物体降落</div></div>
-      <div class="tl-item"><div class="tl-date">1980.12.26-28</div><div class="tl-text">Rendlesham Forest —— 英国Bentwaters空军基地附近，美军人员目击三角形发光物体</div></div>
-      <div class="tl-item"><div class="tl-date">1990.04.04</div><div class="tl-text">Belgian UFO Wave —— 三角形UFO被多人拍摄，比利时空军雷达锁定。2011年拍摄者承认伪造</div></div>
-      <div class="tl-item"><div class="tl-date">1990.08.04</div><div class="tl-text">Calvine UFO —— 苏格兰，菱形物体旁边有英军Harrier战斗机。照片2022年才公开</div></div>
-      <div class="tl-item"><div class="tl-date">1997.03.13</div><div class="tl-text">Phoenix Lights —— 亚利桑那州数千目击者。军方后承认为A-10投放照明弹</div></div>
-      <div class="tl-item"><div class="tl-date">2004.11.14</div><div class="tl-text"><strong>USS Nimitz "Tic Tac" —— 首次现代军方UAP事件。FLIR视频</strong></div></div>
-      <div class="tl-item"><div class="tl-date">2007-2012</div><div class="tl-text">AATIP秘密运行 —— DIA拨款$22M调查UFO。2017年被《纽约时报》曝光</div></div>
-      <div class="tl-item"><div class="tl-date">2015.01-03</div><div class="tl-text"><strong>GIMBAL & GOFAST视频 —— USS Theodore Roosevelt在东海岸录制</strong></div></div>
-      <div class="tl-item"><div class="tl-date">2017.12.16</div><div class="tl-text">《纽约时报》曝光AATIP + 公开三视频 —— 现代UAP透明化运动的起点</div></div>
-      <div class="tl-item"><div class="tl-date">2019.07</div><div class="tl-text"><strong>USS Omaha 球形入水 + USS Russell 金字塔物体 —— 2021年五角大楼确认</strong></div></div>
-      <div class="tl-item"><div class="tl-date">2020.04.27</div><div class="tl-text">五角大楼正式解密三视频 —— FLIR/GIMBAL/GOFAST官方公开发布</div></div>
-      <div class="tl-item"><div class="tl-date">2021.04-05</div><div class="tl-text">五角大楼确认"金字塔/球体/橡果/金属飞艇"照片真实性</div></div>
-      <div class="tl-item"><div class="tl-date">2022.05.17</div><div class="tl-text">50年来首次公开国会UFO听证会</div></div>
-      <div class="tl-item"><div class="tl-date">2022.07.20</div><div class="tl-text">AARO正式成立 —— 全领域异常解决办公室</div></div>
-      <div class="tl-item"><div class="tl-date">2023.04.19</div><div class="tl-text">AARO展示MQ-9中东"金属球"视频</div></div>
-      <div class="tl-item"><div class="tl-date">2023.07.26</div><div class="tl-text">David Grusch吹哨人听证会 —— 声称非人类飞船逆向工程</div></div>
-      <div class="tl-item"><div class="tl-date">2024.03.06</div><div class="tl-text">AARO历史报告第一卷 —— 1945至现在。未发现地外技术证据</div></div>
-      <div class="tl-item"><div class="tl-date">2024.11.13</div><div class="tl-text">众议院UAP听证会 —— "Immaculate Constellation"项目被披露</div></div>
-      <div class="tl-item"><div class="tl-date">2024.11.14</div><div class="tl-text">AARO年度报告 —— 累计1,652案件，&lt;2.5%异常，未发现外星证据</div></div>
-      <div class="tl-item"><div class="tl-date">2026.02.19</div><div class="tl-text">特朗普Truth Social声明启动UFO档案解密</div></div>
-      <div class="tl-item"><div class="tl-date">2026.03.28</div><div class="tl-text">副总统Vance："我痴迷于UFO……我认为它们是恶魔"</div></div>
-      <div class="tl-item breaking"><div class="tl-date">2026.05.08</div><div class="tl-text"><strong>PURSUE系统上线 · 首批161份FBI档案公开 · 滚动发布启动</strong></div></div>
+<!-- ===== SECTION 8: TIMELINE ===== -->
+<div class="section">
+  <h2>八、U.S.政府UAP调查完整时间线</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-date">1947.07</div><div class="tl-text">Roswell Incident — 军方先称回收"飞碟"，后改口气象气球</div></div>
+    <div class="tl-item"><div class="tl-date">1948-1969</div><div class="tl-text">Project Sign / Grudge / Blue Book — 美国空军20年UFO调查，12,618份报告</div></div>
+    <div class="tl-item"><div class="tl-date">2004.11.14</div><div class="tl-text">USS Nimitz "Tic Tac"遭遇 — FLIR视频录制 — 现代UAP时代起点</div></div>
+    <div class="tl-item"><div class="tl-date">2007-2012</div><div class="tl-text">AATIP秘密运行 — DIA拨款$22M — Luis Elizondo任项目负责人</div></div>
+    <div class="tl-item"><div class="tl-date">2015.01-03</div><div class="tl-text">GIMBAL & GOFAST视频录制 — USS Theodore Roosevelt东海岸</div></div>
+    <div class="tl-item"><div class="tl-date">2017.12.16</div><div class="tl-text">NYT曝光AATIP + 三视频公开 — Christopher Mellon向媒体提供</div></div>
+    <div class="tl-item"><div class="tl-date">2019.07.15</div><div class="tl-text">USS Omaha球形物体入水视频 — USS Russell金字塔照片</div></div>
+    <div class="tl-item"><div class="tl-date">2020.04.27</div><div class="tl-text">五角大楼正式解密三视频 — FLIR/GIMBAL/GOFAST官方发布</div></div>
+    <div class="tl-item"><div class="tl-date">2021.04-05</div><div class="tl-text">五角大楼确认球体/橡果/金属飞艇/金字塔照片真实性</div></div>
+    <div class="tl-item"><div class="tl-date">2022.05.17</div><div class="tl-text">50年来首次公开国会UFO听证会</div></div>
+    <div class="tl-item"><div class="tl-date">2022.07.20</div><div class="tl-text">AARO正式成立 — Sean Kirkpatrick任首任局长</div></div>
+    <div class="tl-item"><div class="tl-date">2023.07.26</div><div class="tl-text">David Grusch吹哨人听证会 — 声称非人类飞船逆向工程</div></div>
+    <div class="tl-item"><div class="tl-date">2024.03.06</div><div class="tl-text">AARO历史报告Vol.1 — 1945至今，未发现地外技术经验证据</div></div>
+    <div class="tl-item"><div class="tl-date">2024.11.13</div><div class="tl-text">众议院UAP听证会 — Elizondo/Shellenberger — Immaculate Constellation披露</div></div>
+    <div class="tl-item"><div class="tl-date">2024.11.14</div><div class="tl-text">AARO年度报告 — 1,652累计案件，&lt;2.5%异常</div></div>
+    <div class="tl-item"><div class="tl-date">2025.05.01</div><div class="tl-text">民调：近半数美国人认为政府在隐藏UFO证据</div></div>
+    <div class="tl-item"><div class="tl-date">2026.02.19</div><div class="tl-text">特朗普Truth Social声明启动UFO档案解密</div></div>
+    <div class="tl-item"><div class="tl-date">2026.03.28</div><div class="tl-text">副总统Vance称UFO是"恶魔" — 白宫注册Alien.gov域名</div></div>
+    <div class="tl-item b"><div class="tl-date">2026.05.08</div><div class="tl-text"><strong>PURSUE系统上线 · 首批161份FBI+国防部+国务院档案公开 · war.gov/UFO</strong></div></div>
+  </div>
+</div>
+
+<!-- ===== SECTION 9: EXPLANATIONS ===== -->
+<div class="section">
+  <h2>九、UAP现象的五种解释框架</h2>
+  <div class="pros-cons">
+    <div>
+      <h4 class="p">主流解释 (AARO / 科学界)</h4>
+      <ul>
+        <li>传感器伪影（红外眩光/散景/视差）</li>
+        <li>普通飞行器（商用/军用飞机、无人机、气球）</li>
+        <li>Starlink等卫星星座误报</li>
+        <li>电子战欺骗（敌方radar spoofing）</li>
+        <li>自然大气现象（球状闪电等）</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="c">替代解释 (吹哨人 / UFO社区)</h4>
+      <ul>
+        <li>非人类智能技术（外星飞船）</li>
+        <li>秘密军事项目（美国自有）</li>
+        <li>对手突破性技术（中/俄）</li>
+        <li>跨维度/超自然现象</li>
+        <li>未知物理现象</li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <!-- ============ SECTION 7: EXPLANATIONS ============ -->
-  <div class="section">
-    <h2>七、目击解释框架：五种理论</h2>
-    <div class="pros-cons">
-      <div>
-        <h4 class="pro">主流解释（AARO + 科学界）</h4>
-        <ul>
-          <li>传感器故障或伪影（红外眩光/散景/视差效应）</li>
-          <li>普通飞行器（商用飞机/无人机/气象气球）</li>
-          <li>自然大气现象（球状闪电/冰晶折射）</li>
-          <li>Starlink等卫星星座导致批量误报</li>
-          <li>电子战欺骗（敌方使用radar spoofing制造假目标）</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="con">替代解释（吹哨人 + UFO社区）</h4>
-        <ul>
-          <li>非人类智能技术（外星飞船）</li>
-          <li>秘密军事项目（美国自身的机密飞行器）</li>
-          <li>对手突破性技术（中/俄高超音速或反重力技术）</li>
-          <li>跨维度/超自然现象（Vance的"恶魔论"）</li>
-          <li>未知物理现象（人类尚未理解的自然规律）</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<!-- ===== SECTION 10: KEY RESOURCES ===== -->
+<div class="section">
+  <h2>十、官方资源直达链接</h2>
+  <table class="data-table">
+    <tr><td>PURSUE系统</td><td><a href="https://war.gov/UFO" target="_blank">war.gov/UFO</a></td></tr>
+    <tr><td>AARO官网</td><td><a href="https://www.aaro.mil/" target="_blank">aaro.mil</a></td></tr>
+    <tr><td>海军FOIA视频原件</td><td><a href="https://www.navair.navy.mil/foia/documents" target="_blank">navair.navy.mil/foia/documents</a></td></tr>
+    <tr><td>PURSUE新闻稿全文</td><td><a href="https://www.war.gov/News/Releases/Release/Article/4480582/" target="_blank">war.gov/News/Releases</a></td></tr>
+    <tr><td>文件数据CSV</td><td><a href="https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv" target="_blank">war.gov/Portals/.../uap-csv.csv</a></td></tr>
+    <tr><td>Wikimedia视频源</td><td><a href="https://commons.wikimedia.org/wiki/Category:Pentagon_UFO_videos" target="_blank">commons.wikimedia.org / Pentagon UFO videos</a></td></tr>
+  </table>
+</div>
 
-  <!-- ============ SECTION 8: KEY PLAYERS ============ -->
-  <div class="section">
-    <h2>八、关键人物</h2>
-    <div class="player-cards">
-      <div class="player-card">
-        <div class="name">Jon T. Kosloski</div>
-        <div class="role">AARO现任局长 · 2024.08至今</div>
-        <div class="desc">物理学家+前情报官员。承认存在"true anomalies"——以他的背景无法理解的案例。同时坚称未发现外星证据。</div>
-      </div>
-      <div class="player-card">
-        <div class="name">David Grusch</div>
-        <div class="role">吹哨人 · 前空军军官+情报官员</div>
-        <div class="desc">2023年声称美国政府运行非人类飞船逆向工程。未提供可验证证据。AARO前局长称其指控为"循环报告"。</div>
-      </div>
-      <div class="player-card">
-        <div class="name">Luis Elizondo</div>
-        <div class="role">前AATIP负责人 · Imminent作者</div>
-        <div class="desc">声称"多十年秘密军备竞赛"。2024年称抽屉中有秘密证据文件——FBI搜查后"未发现任何此类物品"。</div>
-      </div>
-      <div class="player-card">
-        <div class="name">Sean Kirkpatrick</div>
-        <div class="role">AARO首任局长 · 2022-2023</div>
-        <div class="desc">物理学家。撰写历史报告第一卷。公开批评Grusch指控。展示中东金属球视频。</div>
-      </div>
-      <div class="player-card">
-        <div class="name">Donald Trump</div>
-        <div class="role">美国总统 · PURSUE启动者</div>
-        <div class="desc">2026年2月发布Truth Social启动UFO解密。白宫注册Alien.gov域名。称"已发现许多有趣文件"。</div>
-      </div>
-      <div class="player-card">
-        <div class="name">JD Vance</div>
-        <div class="role">美国副总统</div>
-        <div class="desc">声称UFO不是外星人而是"demons"。计划访问Area 51。拥有"最高级安全许可三年"。</div>
-      </div>
-    </div>
-  </div>
+<div class="sources">
+  <h2>数据来源</h2>
+  <ol>
+    <li>war.gov/UFO — PURSUE总统UAP解密系统 <a href="https://war.gov/UFO">link</a></li>
+    <li>war.gov — Department of War Releases UAP Files Press Release (2026.05.08) <a href="https://www.war.gov/News/Releases/Release/Article/4480582/">link</a></li>
+    <li>war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv — 完整161份文件元数据</li>
+    <li>navair.navy.mil/foia/documents — 美国海军FOIA阅览室（GOFAST.mp4 / GIMBAL.mp4）<a href="https://www.navair.navy.mil/foia/documents">link</a></li>
+    <li>Wikimedia Commons — Pentagon UFO videos (FLIR/GIMBAL/GOFAST/USS Omaha) <a href="https://commons.wikimedia.org/wiki/Category:Pentagon_UFO_videos">link</a></li>
+    <li>The Hill — "Pentagon releases new batch of UFO files" (2026.05.08) <a href="https://thehill.com/policy/defense/5869342-pentagon-ufo-files-release/">link</a></li>
+    <li>The Hill — "Vance says he's obsessed with UFO files, calls aliens demons" (2026.03.28) <a href="https://thehill.com/homenews/administration/5806206-vance-obsessed-ufo-mystery/">link</a></li>
+    <li>The Hill — "Pentagon UFO office received more than 700 reports" (2024.11.14) <a href="https://thehill.com/policy/defense/4990769-pentagon-ufo-office-reports/">link</a></li>
+    <li>The Hill — "House panel hears of hidden UAP trove" (2024.11.13) <a href="https://thehill.com/homenews/house/4989539-house-uap-secrecy-hearing/">link</a></li>
+    <li>Wikipedia — "Pentagon UFO videos" <a href="https://en.wikipedia.org/wiki/Pentagon_UFO_videos">link</a></li>
+    <li>Wikipedia — "All-domain Anomaly Resolution Office" <a href="https://en.wikipedia.org/wiki/All-domain_Anomaly_Resolution_Office">link</a></li>
+    <li>Wikimedia Commons — 所有历史UFO照片来自公共领域/CC授权</li>
+  </ol>
+</div>
 
-  <!-- ============ SECTION 9: WHERE TO GET FILES ============ -->
-  <div class="section">
-    <h2>九、官方文件获取渠道</h2>
-
-    <div class="download-box">
-      <p><strong style="color:#c4b998;">war.gov/UFO</strong> — PURSUE系统。首批161份PDF。每几周新批次。</p>
-      <a href="https://war.gov/UFO" target="_blank">war.gov/UFO → 交互式图表，可按机构/日期/地点筛选</a>
-    </div>
-    <div class="download-box">
-      <p><strong style="color:#c4b998;">aaro.mil</strong> — AARO官网。历史报告、年度报告、图片和视频。</p>
-      <a href="https://www.aaro.mil/" target="_blank">aaro.mil</a>
-    </div>
-    <div class="download-box">
-      <p><strong style="color:#c4b998;">navair.navy.mil/foia/documents</strong> — 海军航空系统司令部FOIA阅览室。FLIR.mp4 / GIMBAL.wmv / GOFAST.wmv 原始文件。</p>
-      <a href="https://www.navair.navy.mil/foia/documents" target="_blank">navair.navy.mil/foia/documents</a>
-    </div>
-    <div class="download-box">
-      <p><strong style="color:#c4b998;">Wikipedia — Pentagon UFO videos</strong> — 所有已知UAP视频的维基百科条目，包含Wikimedia Commons托管版本。</p>
-      <a href="https://en.wikipedia.org/wiki/Pentagon_UFO_videos" target="_blank">en.wikipedia.org/wiki/Pentagon_UFO_videos</a>
-    </div>
-  </div>
-
-  <!-- SOURCES -->
-  <div class="sources">
-    <h2>资料来源</h2>
-    <ol>
-      <li>war.gov/UFO — PURSUE系统官方网站 (2026.05.08上线)</li>
-      <li>The Hill — "Pentagon releases new batch of UFO files" (2026.05.08) <a href="https://thehill.com/policy/defense/5869342-pentagon-ufo-files-release/">链接</a></li>
-      <li>The Hill — "Vance says he's 'obsessed' with UFO files, calls aliens 'demons'" (2026.03.28) <a href="https://thehill.com/homenews/administration/5806206-vance-obsessed-ufo-mystery/">链接</a></li>
-      <li>The Hill — "Pentagon UFO office received more than 700 reports" (2024.11.14) <a href="https://thehill.com/policy/defense/4990769-pentagon-ufo-office-reports/">链接</a></li>
-      <li>The Hill — "House panel hears of hidden UAP trove" (2024.11.13) <a href="https://thehill.com/homenews/house/4989539-house-uap-secrecy-hearing/">链接</a></li>
-      <li>Wikipedia — "Pentagon UFO videos" <a href="https://en.wikipedia.org/wiki/Pentagon_UFO_videos">链接</a></li>
-      <li>Wikipedia — "All-domain Anomaly Resolution Office" <a href="https://en.wikipedia.org/wiki/All-domain_Anomaly_Resolution_Office">链接</a></li>
-      <li>U.S. Naval Air Systems Command FOIA <a href="https://www.navair.navy.mil/foia/documents">链接</a></li>
-      <li>AARO — "Report on the Historical Record Volume I" (2024.03.06)</li>
-      <li>ODNI — "Preliminary Assessment: UAP" (2021.06.25)</li>
-      <li>Wikimedia Commons — 所有历史UFO照片均来自Wikimedia Commons公共领域/CC许可</li>
-      <li>YouTube — 美国海军/To The Stars Academy/新闻媒体公开上传的UAP视频</li>
-    </ol>
-  </div>
-
-  <div class="footer-note">
-    越界视觉档案 · 2026年5月10日 · 持续更新<br>
-    「我们不提供结论，只提供看到的一切。」
-  </div>
+<div class="footer-note">
+  越界视觉档案 · 2026年5月10日 · 基于美国国防部官方源文件构建<br>
+  所有视频 → Wikimedia Commons (美国政府官方文件) | 所有缩略图 → war.gov/medialink | 所有PDF → war.gov<br>
+  「我们不提供结论，只提供美国政府公开的全部原始资料。」
+</div>
 
 </div>
+
+<script>
+// Load thumbnails and file table from the CSV data
+(function() {
+  // 127 unique thumbnail URLs from war.gov official CSV
+  var THUMB_URLS = [];
+  var FILE_ENTRIES = [];
+
+  // Fetch CSV from war.gov and populate
+  fetch('https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv')
+    .then(function(r) { return r.text(); })
+    .then(function(csv) {
+      var lines = csv.split('\n');
+
+      // Extract thumbnails
+      var thumbMatch = csv.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/thumbnail\/[^\s",]+\.jpg/g);
+      if (thumbMatch) {
+        var seen = {};
+        THUMB_URLS = thumbMatch.filter(function(u) {
+          if (seen[u]) return false;
+          seen[u] = true;
+          return true;
+        });
+      }
+
+      // Extract PDF entries
+      var pdfMatch = csv.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/[^\s",]+\.pdf/g);
+      if (pdfMatch) {
+        var seenPdf = {};
+        pdfMatch = pdfMatch.filter(function(u) {
+          if (seenPdf[u]) return false;
+          seenPdf[u] = true;
+          return true;
+        });
+      }
+
+      // Parse each line for file entries
+      for (var i = 1; i < lines.length; i++) {
+        var line = lines[i];
+        if (!line.trim()) continue;
+        var pdfUrl = line.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/[^\s",]+\.pdf/);
+        if (pdfUrl) {
+          var filename = pdfUrl[0].split('/').pop().replace(/_/g, ' ').replace('.pdf', '');
+          var m = line.match(/,(\d+\/\d+\/\d+),/);
+          var date = m ? m[1] : 'N/A';
+          var agencies = ['FBI', 'DOW', 'State Dept', 'DoD', 'DIA', 'CIA', 'NSA', 'NARA', 'Other'];
+          var agency = 'Various';
+          for (var a = 0; a < agencies.length; a++) {
+            if (line.includes(agencies[a])) { agency = agencies[a]; break; }
+          }
+          if (filename.includes('hs1') || filename.includes('HQ-83894')) agency = 'FBI';
+          if (filename.includes('state') || filename.includes('cable')) agency = 'State Dept';
+          var thumbUrl = line.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/thumbnail\/[^\s",]+\.jpg/);
+          FILE_ENTRIES.push({
+            filename: filename.substring(0, 80),
+            pdfUrl: pdfUrl[0],
+            thumbUrl: thumbUrl ? thumbUrl[0] : '',
+            date: date,
+            agency: agency
+          });
+        }
+      }
+
+      // Render thumbnail grid
+      var grid = document.getElementById('thumbGrid');
+      if (grid && THUMB_URLS.length > 0) {
+        var html = '';
+        for (var t = 0; t < Math.min(THUMB_URLS.length, 80); t++) {
+          var fn = THUMB_URLS[t].split('/').pop().replace('.jpg', '').replace(/_/g, ' ');
+          var pdfUrl = THUMB_URLS[t].replace('/thumbnail/', '/').replace('.jpg', '.pdf');
+          html += '<div class="thumb-item"><a href="' + pdfUrl + '" target="_blank"><img src="' + THUMB_URLS[t] + '" loading="lazy" alt=""><div class="t-label">' + fn.substring(0, 50) + '</div></a></div>';
+        }
+        if (THUMB_URLS.length > 80) {
+          html += '<div class="thumb-item" style="display:flex;align-items:center;justify-content:center;color:#6b6560;font-size:12px;">+ ' + (THUMB_URLS.length - 80) + ' more files<br><a href="https://war.gov/UFO" target="_blank" style="color:#c4b998;">View all on war.gov/UFO</a></div>';
+        }
+        grid.innerHTML = html;
+      }
+
+      // Render file table
+      var tbody = document.getElementById('fileTableBody');
+      if (tbody && FILE_ENTRIES.length > 0) {
+        var thtml = '';
+        for (var f = 0; f < FILE_ENTRIES.length; f++) {
+          var e = FILE_ENTRIES[f];
+          thtml += '<tr><td>' + e.filename + '</td><td>PDF</td><td>' + e.agency + '</td><td>' + e.date + '</td><td><a href="' + e.pdfUrl + '" target="_blank">Download</a></td></tr>';
+        }
+        tbody.innerHTML = thtml;
+      }
+
+      document.getElementById('thumbGrid') && document.getElementById('thumbGrid').setAttribute('data-loaded', THUMB_URLS.length);
+      document.getElementById('fileTableBody') && document.getElementById('fileTableBody').setAttribute('data-loaded', FILE_ENTRIES.length);
+    })
+    .catch(function(e) {
+      console.log('CSV load fallback: using static data');
+      var grid = document.getElementById('thumbGrid');
+      if (grid) grid.innerHTML = '<p style="color:#6b6560;text-align:center;padding:3vh;">缩略图需要通过 war.gov/UFO 直接访问查看。<br><a href="https://war.gov/UFO" target="_blank" style="color:#c4b998;">→ 访问 war.gov/UFO 互动图表</a></p>';
+    });
+})();
+</script>
+
 </body>
 </html>
