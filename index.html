@@ -199,21 +199,17 @@
   </div>
 </div>
 
-<!-- ===== SECTION 3: PURSUE FILE GALLERY ===== -->
+<!-- ===== SECTION 3: FILE BROWSER ===== -->
 <div class="section">
-  <h2>三、PURSUE Release 01 · 全部161份文件缩略图预览</h2>
-  <p>以下缩略图直接来自 <strong>war.gov/medialink</strong> 官方源。点击缩略图跳转至官方PDF全文。</p>
+  <h2>三、PURSUE Release 01 · 完整文件浏览器</h2>
+  <p>数据源：<strong>war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv</strong>（官方CSV）。点击PDF直达官方文件。如需查看缩略图请访问 <a href="https://war.gov/UFO" target="_blank" style="color:#c4b998;">war.gov/UFO 互动图表</a>。</p>
 
-  <div class="thumb-grid" id="thumbGrid">
+  <div class="stat-strip" style="margin-bottom:3vh;" id="fileStats">
+    <div class="stat-item"><div class="stat-val" id="statTotal">-</div><div class="stat-lab">文件总数</div></div>
+    <div class="stat-item"><div class="stat-val" id="statFBI">-</div><div class="stat-lab">FBI档案</div></div>
+    <div class="stat-item"><div class="stat-val" id="statState">-</div><div class="stat-lab">国务院电报</div></div>
+    <div class="stat-item"><div class="stat-val" id="statOther">-</div><div class="stat-lab">国防部/其他</div></div>
   </div>
-
-  <p style="margin-top:2vh;font-size:12px;color:#5e5a54;">注：部分缩略图对应的PDF文件可能需要美国联邦政府授权访问。完整文件列表见下节表格。</p>
-</div>
-
-<!-- ===== SECTION 4: FILE TABLE ===== -->
-<div class="section">
-  <h2>四、完整文件清单 （Release 01 — 2026年5月8日）</h2>
-  <p>点击PDF链接可直接下载。来源：<strong>war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv</strong></p>
 
   <div style="overflow-x:auto;">
   <table class="data-table" id="fileTable">
@@ -224,6 +220,7 @@
     </tbody>
   </table>
   </div>
+  <p style="margin-top:2vh;font-size:11px;color:#5e5a54;">注：共127份PDF。部分文件来自FBI历史档案（62-HQ-83894主案卷），部分来自国务院UAP相关外交电报，部分来自国防部/空军历史调查档案。所有文件均为2026年5月8日首批公开。</p>
 </div>
 
 <!-- ===== SECTION 5: WAR.GOV SCREENSHOT ===== -->
@@ -391,100 +388,49 @@
 </div>
 
 <script>
-// Load thumbnails and file table from the CSV data
 (function() {
-  // 127 unique thumbnail URLs from war.gov official CSV
-  var THUMB_URLS = [];
-  var FILE_ENTRIES = [];
-
-  // Fetch CSV from war.gov and populate
   fetch('https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-csv.csv')
     .then(function(r) { return r.text(); })
     .then(function(csv) {
       var lines = csv.split('\n');
+      var entries = [];
+      var fbi = 0, state = 0, other = 0;
 
-      // Extract thumbnails
-      var thumbMatch = csv.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/thumbnail\/[^\s",]+\.jpg/g);
-      if (thumbMatch) {
-        var seen = {};
-        THUMB_URLS = thumbMatch.filter(function(u) {
-          if (seen[u]) return false;
-          seen[u] = true;
-          return true;
-        });
-      }
-
-      // Extract PDF entries
-      var pdfMatch = csv.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/[^\s",]+\.pdf/g);
-      if (pdfMatch) {
-        var seenPdf = {};
-        pdfMatch = pdfMatch.filter(function(u) {
-          if (seenPdf[u]) return false;
-          seenPdf[u] = true;
-          return true;
-        });
-      }
-
-      // Parse each line for file entries
       for (var i = 1; i < lines.length; i++) {
         var line = lines[i];
         if (!line.trim()) continue;
         var pdfUrl = line.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/[^\s",]+\.pdf/);
         if (pdfUrl) {
-          var filename = pdfUrl[0].split('/').pop().replace(/_/g, ' ').replace('.pdf', '');
+          var fn = pdfUrl[0].split('/').pop().replace('.pdf', '').replace(/_/g, ' ').trim();
           var m = line.match(/,(\d+\/\d+\/\d+),/);
           var date = m ? m[1] : 'N/A';
-          var agencies = ['FBI', 'DOW', 'State Dept', 'DoD', 'DIA', 'CIA', 'NSA', 'NARA', 'Other'];
-          var agency = 'Various';
-          for (var a = 0; a < agencies.length; a++) {
-            if (line.includes(agencies[a])) { agency = agencies[a]; break; }
-          }
-          if (filename.includes('hs1') || filename.includes('HQ-83894')) agency = 'FBI';
-          if (filename.includes('state') || filename.includes('cable')) agency = 'State Dept';
-          var thumbUrl = line.match(/https:\/\/www\.war\.gov\/medialink\/ufo\/release_1\/thumbnail\/[^\s",]+\.jpg/);
-          FILE_ENTRIES.push({
-            filename: filename.substring(0, 80),
-            pdfUrl: pdfUrl[0],
-            thumbUrl: thumbUrl ? thumbUrl[0] : '',
-            date: date,
-            agency: agency
-          });
+          var agency = 'DoD/Other';
+          var fnLower = fn.toLowerCase();
+          if (fnLower.includes('hs1') || fnLower.includes('hq-83894') || fnLower.includes('serial') || fnLower.includes('section')) { agency = 'FBI'; fbi++; }
+          else if (fnLower.includes('state') || fnLower.includes('cable') || fnLower.includes('tbilisi') || fnLower.includes('ashgabat') || fnLower.includes('mexico') || fnLower.includes('diplomatic')) { agency = 'State Dept'; state++; }
+          else { other++; }
+          entries.push({ filename: fn.substring(0, 90), pdfUrl: pdfUrl[0], date: date, agency: agency });
         }
       }
 
-      // Render thumbnail grid
-      var grid = document.getElementById('thumbGrid');
-      if (grid && THUMB_URLS.length > 0) {
-        var html = '';
-        for (var t = 0; t < Math.min(THUMB_URLS.length, 80); t++) {
-          var fn = THUMB_URLS[t].split('/').pop().replace('.jpg', '').replace(/_/g, ' ');
-          var pdfUrl = THUMB_URLS[t].replace('/thumbnail/', '/').replace('.jpg', '.pdf');
-          html += '<div class="thumb-item"><a href="' + pdfUrl + '" target="_blank"><img src="' + THUMB_URLS[t] + '" loading="lazy" alt=""><div class="t-label">' + fn.substring(0, 50) + '</div></a></div>';
-        }
-        if (THUMB_URLS.length > 80) {
-          html += '<div class="thumb-item" style="display:flex;align-items:center;justify-content:center;color:#6b6560;font-size:12px;">+ ' + (THUMB_URLS.length - 80) + ' more files<br><a href="https://war.gov/UFO" target="_blank" style="color:#c4b998;">View all on war.gov/UFO</a></div>';
-        }
-        grid.innerHTML = html;
-      }
+      document.getElementById('statTotal').textContent = entries.length;
+      document.getElementById('statFBI').textContent = fbi;
+      document.getElementById('statState').textContent = state;
+      document.getElementById('statOther').textContent = other;
 
-      // Render file table
       var tbody = document.getElementById('fileTableBody');
-      if (tbody && FILE_ENTRIES.length > 0) {
-        var thtml = '';
-        for (var f = 0; f < FILE_ENTRIES.length; f++) {
-          var e = FILE_ENTRIES[f];
-          thtml += '<tr><td>' + e.filename + '</td><td>PDF</td><td>' + e.agency + '</td><td>' + e.date + '</td><td><a href="' + e.pdfUrl + '" target="_blank">Download</a></td></tr>';
+      if (tbody) {
+        var h = '';
+        for (var f = 0; f < entries.length; f++) {
+          var e = entries[f];
+          h += '<tr><td style="font-family:monospace;font-size:11px;">' + e.filename + '</td><td>PDF</td><td>' + e.agency + '</td><td>' + e.date + '</td><td><a href="' + e.pdfUrl + '" target="_blank">Download</a></td></tr>';
         }
-        tbody.innerHTML = thtml;
+        tbody.innerHTML = h;
       }
-
-      document.getElementById('thumbGrid') && document.getElementById('thumbGrid').setAttribute('data-loaded', THUMB_URLS.length);
-      document.getElementById('fileTableBody') && document.getElementById('fileTableBody').setAttribute('data-loaded', FILE_ENTRIES.length);
     })
     .catch(function(e) {
-      console.log('CSV load fallback: using static data');
-      var grid = document.getElementById('thumbGrid');
-      if (grid) grid.innerHTML = '<p style="color:#6b6560;text-align:center;padding:3vh;">缩略图需要通过 war.gov/UFO 直接访问查看。<br><a href="https://war.gov/UFO" target="_blank" style="color:#c4b998;">→ 访问 war.gov/UFO 互动图表</a></p>';
+      var tbody = document.getElementById('fileTableBody');
+      if (tbody) tbody.innerHTML = '<tr><td colspan="5" style="color:#b0725a;text-align:center;">无法加载CSV数据。请直接访问 <a href="https://war.gov/UFO" target="_blank" style="color:#c4b998;">war.gov/UFO</a> 查看完整文件列表。</td></tr>';
     });
 })();
 </script>
